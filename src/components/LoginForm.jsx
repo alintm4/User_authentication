@@ -66,13 +66,14 @@ async function auth(event) {
             className="text-xl text-pretty 
             rounded-lg border border-gray-300 
             p-2"/>
-        </form>
-        <button
+            <button
          type="submit" 
         
         className="bg-slate-700 
         rounded-md cursor-pointer 
         p-3 m-4 hover:bg-slate-600 ">Login</button>
+        </form>
+        
       </div>
       {user && (
           <div>
