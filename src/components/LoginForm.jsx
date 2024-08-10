@@ -1,11 +1,14 @@
 
 import React, {useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
 const [email,setEmail]=useState("");
 const [password,setPassword]=useState('');
 const [error, setError] = useState("");
 const [user, setUser] = useState(null);
+
+const navigate = useNavigate();
 
 const handleEmail=(event)=>{
   setEmail(event.target.value)
@@ -43,6 +46,8 @@ async function auth(event) {
     setError("error occurred while logging in");
     console.error("error in login:", err);
   }
+
+  navigate("/contents");
 }
   return (
     <div className="h-screen bg-yellow-950 flex justify-center">

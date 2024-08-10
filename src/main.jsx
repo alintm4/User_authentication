@@ -6,12 +6,15 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Root from './root.jsx'
 import LoginForm from './components/LoginForm.jsx'
 import SignUpForm from './components/SignUpForm.jsx'
+import Content from './components/Content.jsx'
 
 const router= createBrowserRouter(
   createRoutesFromElements(
     <><Route path='/' element={<Root />} />
     <Route path='/login' element={<LoginForm />} />
-    <Route path='/signup' element={<SignUpForm />}/></>
+    <Route path='/signup' element={<SignUpForm />}/>
+    <Route path='/contents' element={<Content />} />
+    </>
     
   )
 )

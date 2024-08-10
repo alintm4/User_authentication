@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function SignUpForm() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [user, setUser] = useState(null);
+  
+  const navigate = useNavigate();
   
   const handleName = (event) => {
     setName(event.target.value);
@@ -44,6 +47,8 @@ function SignUpForm() {
     setName("");
     setPassword("");
     setEmail("");
+
+    navigate("/");
   }
 
   return (
